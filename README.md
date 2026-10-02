@@ -1,4 +1,3 @@
-nano README.mdlol
 # Ação Comunitária
 
 Projeto de website desenvolvido para a ONG fictícia Ação Comunitária, como parte da disciplina Experiência Prática IV.
