@@ -1,0 +1,448 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7f5;
+    color: #26332b;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    width: min(1100px, 90%);
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background-color: #176b4d;
+    padding: 10px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: bold;
+    padding: 9px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #0f543b;
+}
+
+.nav-links a:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+    background-color: white;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+h1 {
+    color: #176b4d;
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #176b4d;
+    margin-bottom: 12px;
+}
+
+h3 {
+    color: #176b4d;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* =========================
+   DESTAQUE
+========================= */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #e2f2ea,
+        #ffffff
+    );
+
+    padding: 60px 45px;
+}
+
+.hero h1 {
+    max-width: 700px;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 1.1rem;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.button,
+button {
+    display: inline-block;
+
+    background-color: #176b4d;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    padding: 12px 22px;
+    margin-top: 10px;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s,
+        transform 0.2s,
+        opacity 0.2s,
+        box-shadow 0.2s;
+}
+
+.button:hover,
+button:hover {
+    background-color: #0f543b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.button:focus,
+button:focus {
+    outline: 2px solid #58a77f;
+    outline-offset: 3px;
+}
+
+.button:active,
+button:active {
+    transform: translateY(0);
+    opacity: 0.8;
+}
+
+button:disabled {
+    background-color: #c8d3cd;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.highlights,
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.highlights article,
+.projects article {
+    background-color: #f0f7f3;
+    border-left: 4px solid #176b4d;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.projects article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.projects article .button {
+    margin-top: auto;
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+    display: inline-block;
+
+    padding: 5px 10px;
+    border-radius: 20px;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.badge-green {
+    background-color: #e2f2ea;
+    color: #176b4d;
+}
+
+.badge-blue {
+    background-color: #e3eff8;
+    color: #28658a;
+}
+
+.badge-orange {
+    background-color: #fff0dc;
+    color: #9a5b16;
+}
+
+/* =========================
+   ALERTAS
+========================= */
+
+.alert {
+    padding: 15px 20px;
+    margin: 20px 0;
+
+    border-radius: 8px;
+    border-left: 5px solid;
+}
+
+.alert-info {
+    background-color: #e8f2f8;
+    border-color: #28658a;
+    color: #214d68;
+}
+
+.alert-success {
+    background-color: #e2f2ea;
+    border-color: #176b4d;
+    color: #14533c;
+}
+
+.alert-warning {
+    background-color: #fff4dc;
+    border-color: #d99a24;
+    color: #76500d;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+fieldset {
+    border: 1px solid #d5dfd9;
+    border-radius: 8px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+legend {
+    color: #176b4d;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #c8d3cd;
+    border-radius: 6px;
+
+    background-color: white;
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+
+    border-color: #176b4d;
+
+    box-shadow:
+        0 0 0 2px rgba(88, 167, 127, 0.25);
+}
+
+input:valid,
+select:valid {
+    border-color: #58a77f;
+}
+
+input:invalid:not(:placeholder-shown),
+select:invalid {
+    border-color: #c94c4c;
+}
+
+.field-error {
+    color: #c94c4c;
+    font-size: 0.9rem;
+    min-height: 18px;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: #123d2f;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        width: 92%;
+        padding: 30px 0;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .highlights,
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 40px 25px;
+    }
+
+    button,
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
