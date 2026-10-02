@@ -1,0 +1,1 @@
+const STORAGE_KEY="acaoComunitariaCadastro";function salvarCadastro(a){localStorage.setItem(STORAGE_KEY,JSON.stringify(a))}function obterCadastro(){const a=localStorage.getItem(STORAGE_KEY);return a?JSON.parse(a):null}
