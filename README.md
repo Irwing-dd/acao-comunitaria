@@ -59,3 +59,13 @@ Projeto/
 └── .github/
     └── workflows/
         └── pages.yml
+## Fluxo Git
+
+O projeto utiliza uma estratégia baseada em GitFlow:
+
+- `main`: versão estável e publicada em produção.
+- `develop`: branch de desenvolvimento e integração.
+- `feature/*`: utilizada para desenvolver novas funcionalidades.
+- `hotfix/*`: utilizada para correções urgentes na versão de produção.
+
+As novas funcionalidades são desenvolvidas em branches `feature/*` e posteriormente integradas à `develop` por meio de Pull Requests.
