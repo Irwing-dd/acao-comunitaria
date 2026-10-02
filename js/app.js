@@ -4,7 +4,7 @@ const navLinks =
     document.querySelector("#nav-links");
 
 const menuToggle =
-    document.querySelector("#menu-toggle");
+    document.querySelector(".menu-toggle");
 
 
 const templates = {
@@ -257,6 +257,16 @@ function fecharMenu() {
 
     navLinks.classList.remove("active");
 
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    menuToggle.setAttribute(
+        "aria-label",
+        "Abrir menu"
+    );
+
 }
 
 
@@ -264,7 +274,20 @@ menuToggle.addEventListener(
     "click",
     function() {
 
-        navLinks.classList.toggle("active");
+        const aberto =
+            navLinks.classList.toggle("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            aberto
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            aberto
+                ? "Fechar menu"
+                : "Abrir menu"
+        );
 
     }
 );

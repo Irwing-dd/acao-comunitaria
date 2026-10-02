@@ -15,6 +15,7 @@ function criarFormulario() {
                 id="form-alert"
                 class="alert alert-info"
                 role="alert"
+                aria-live="polite"
             >
                 <strong>Informação:</strong>
                 Preencha seus dados para participar das nossas ações.
@@ -43,11 +44,13 @@ function criarFormulario() {
                         name="nome"
                         autocomplete="name"
                         required
+                        aria-describedby="nome-error"
                     >
 
                     <span
                         class="field-error"
                         id="nome-error"
+                        role="alert"
                     ></span>
 
 
@@ -61,11 +64,13 @@ function criarFormulario() {
                         name="email"
                         autocomplete="email"
                         required
+                        aria-describedby="email-error"
                     >
 
                     <span
                         class="field-error"
                         id="email-error"
+                        role="alert"
                     ></span>
 
 
@@ -79,11 +84,13 @@ function criarFormulario() {
                         name="telefone"
                         autocomplete="tel"
                         required
+                        aria-describedby="telefone-error"
                     >
 
                     <span
                         class="field-error"
                         id="telefone-error"
+                        role="alert"
                     ></span>
 
                 </fieldset>
@@ -101,6 +108,7 @@ function criarFormulario() {
                         id="participacao"
                         name="participacao"
                         required
+                        aria-describedby="participacao-error"
                     >
 
                         <option value="">
@@ -124,6 +132,7 @@ function criarFormulario() {
                     <span
                         class="field-error"
                         id="participacao-error"
+                        role="alert"
                     ></span>
 
 
